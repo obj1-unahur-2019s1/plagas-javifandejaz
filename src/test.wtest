@@ -1,0 +1,12 @@
+import elementos.*
+
+test "barrios" {
+
+	var hogar1 = new Hogar(mugre = 20, confort = 50)
+	var huerta1 = new Huerta(capacidadDeProduccion = 1000)
+	
+	var morris = new Barrio()
+	morris.agregarElementos([hogar1, huerta1])
+	morris.agregarElemento(new Hogar(mugre = 500, confort = 30))
+	assert.that(hogar1.esBuene())
+}
